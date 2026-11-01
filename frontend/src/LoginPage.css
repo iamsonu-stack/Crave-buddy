@@ -1,0 +1,510 @@
+.cb-login-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(440px, 0.9fr);
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  color: #202c40;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.cb-login-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: clamp(28px, 4vw, 62px);
+  overflow: hidden;
+  background: linear-gradient(145deg, #e8f8ed 0%, #f3fbf5 55%, #fff1dc 100%);
+}
+
+.cb-login-brand,
+.cb-login-mobile-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  width: fit-content;
+  color: #202c40;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.cb-login-brand > span:last-child span,
+.cb-login-mobile-brand > span:last-child span {
+  color: #16a34a;
+}
+
+.cb-login-brand-icon {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  background: #16a34a;
+}
+
+.cb-login-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-top: clamp(48px, 7vh, 82px);
+}
+
+.cb-login-eyebrow,
+.cb-login-small-eyebrow {
+  color: #168447;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.cb-login-hero-copy h1 {
+  margin: 14px 0 15px;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2.3px;
+}
+
+.cb-login-hero-copy h1 span {
+  color: #16a34a;
+}
+
+.cb-login-hero-copy > p {
+  max-width: 500px;
+  margin: 0;
+  color: #65768a;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.cb-login-perks {
+  display: grid;
+  gap: 12px;
+  margin-top: 27px;
+  color: #426c50;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cb-login-perks span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.cb-login-perks svg {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.cb-login-food-art {
+  position: relative;
+  width: min(410px, 75%);
+  aspect-ratio: 1.38;
+  margin: 24px auto 12px;
+}
+
+.cb-login-food-art img {
+  position: absolute;
+  z-index: 1;
+  inset: 8% 8% 8% 8%;
+  width: 84%;
+  height: 84%;
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 32px;
+  object-fit: cover;
+  box-shadow: 0 22px 54px rgba(33, 77, 44, 0.17);
+  transform: rotate(-4deg);
+}
+
+.cb-login-food-orbit {
+  position: absolute;
+  border: 1px solid rgba(22, 163, 74, 0.22);
+  border-radius: 50%;
+}
+
+.cb-login-food-orbit-one {
+  inset: -8% 0 0 -8%;
+  transform: rotate(-17deg);
+}
+
+.cb-login-food-orbit-two {
+  inset: 4% -7% -6% 7%;
+  transform: rotate(13deg);
+}
+
+.cb-login-floating {
+  position: absolute;
+  z-index: 2;
+  padding: 11px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #395346;
+  box-shadow: 0 9px 27px rgba(33, 77, 44, 0.1);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cb-login-floating-top {
+  top: 6%;
+  right: -6%;
+}
+
+.cb-login-floating-bottom {
+  bottom: 3%;
+  left: -8%;
+}
+
+.cb-login-left-footer {
+  margin-top: auto;
+  padding-top: 15px;
+  color: #728776;
+  font-size: 11px;
+}
+
+.cb-login-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 68px clamp(28px, 5vw, 80px) 52px;
+  background: #fff;
+}
+
+.cb-login-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 0;
+  border: 0;
+  background: transparent;
+  color: #687990;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cb-login-back:hover {
+  color: #168447;
+}
+
+.cb-login-back-desktop {
+  position: absolute;
+  top: 26px;
+  right: 34px;
+}
+
+.cb-login-back-mobile,
+.cb-login-mobile-brand {
+  display: none;
+}
+
+.cb-login-form-wrap {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.cb-login-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  margin-bottom: 29px;
+  border-radius: 11px;
+  background: #f2f6f3;
+}
+
+.cb-login-tabs button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #718096;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cb-login-tabs button.active {
+  background: #fff;
+  color: #168447;
+  box-shadow: 0 2px 7px rgba(25, 45, 70, 0.08);
+}
+
+.cb-login-heading h2 {
+  margin: 9px 0 8px;
+  color: #1e2c40;
+  font-size: clamp(26px, 2.4vw, 33px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.cb-login-heading p {
+  margin: 0;
+  color: #7b899b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.cb-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.cb-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #34445b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cb-login-input-wrap {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid #dce5e2;
+  border-radius: 11px;
+  background: #fbfdfb;
+  color: #8a9aab;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cb-login-input-wrap:focus-within {
+  border-color: #50b76d;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.09);
+}
+
+.cb-login-input-wrap input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #253349;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.cb-login-input-wrap input::placeholder {
+  color: #a2adba;
+}
+
+.cb-login-show-password {
+  display: grid;
+  place-items: center;
+  padding: 3px;
+  border: 0;
+  background: transparent;
+  color: #8190a2;
+}
+
+.cb-login-submit {
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 3px;
+  border: 0;
+  border-radius: 11px;
+  background: #16a34a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 7px 15px rgba(22, 163, 74, 0.15);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cb-login-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #12813b;
+}
+
+.cb-login-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.cb-login-alert {
+  padding: 11px 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.cb-login-alert-error {
+  border: 1px solid #f2c9c5;
+  background: #fff4f3;
+  color: #a62d25;
+}
+
+.cb-login-alert-success {
+  border: 1px solid #c9ebd1;
+  background: #f0fbf2;
+  color: #176b37;
+}
+
+.cb-login-switch {
+  margin-top: 22px;
+  color: #7b899b;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cb-login-switch button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #168447;
+  font-size: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cb-login-security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 21px;
+  color: #9aa5b4;
+  font-size: 10px;
+}
+
+.cb-login-right-footer {
+  position: absolute;
+  right: 25px;
+  bottom: 18px;
+  left: 25px;
+  color: #a0aab7;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .cb-login-screen {
+    grid-template-columns: minmax(0, 0.8fr) minmax(400px, 1fr);
+  }
+
+  .cb-login-left {
+    padding: 30px;
+  }
+
+  .cb-login-hero-copy h1 {
+    font-size: 36px;
+  }
+
+  .cb-login-hero-copy > p {
+    font-size: 13px;
+  }
+
+  .cb-login-food-art {
+    width: 90%;
+  }
+
+  .cb-login-right {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .cb-login-screen {
+    display: block;
+    padding: 0;
+  }
+
+  .cb-login-left {
+    display: none;
+  }
+
+  .cb-login-right {
+    min-height: 100vh;
+    padding: 62px 22px 65px;
+  }
+
+  .cb-login-back-desktop {
+    display: none;
+  }
+
+  .cb-login-back-mobile {
+    display: inline-flex;
+    position: absolute;
+    top: 13px;
+    left: 20px;
+  }
+
+  .cb-login-mobile-brand {
+    display: inline-flex;
+    margin-bottom: 28px;
+    font-size: 22px;
+  }
+
+  .cb-login-brand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .cb-login-heading h2 {
+    font-size: 28px;
+  }
+
+  .cb-login-right-footer {
+    bottom: 14px;
+  }
+}
+
+@media (max-height: 750px) and (min-width: 681px) {
+  .cb-login-screen {
+    min-height: 100vh;
+  }
+
+  .cb-login-left {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .cb-login-hero-copy {
+    margin-top: 35px;
+  }
+
+  .cb-login-food-art {
+    width: 300px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .cb-login-right {
+    padding-top: 55px;
+    padding-bottom: 45px;
+  }
+
+  .cb-login-tabs {
+    margin-bottom: 20px;
+  }
+
+  .cb-login-form {
+    gap: 11px;
+    margin-top: 18px;
+  }
+}
